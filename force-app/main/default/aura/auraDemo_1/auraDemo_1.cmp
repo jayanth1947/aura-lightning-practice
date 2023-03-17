@@ -1,0 +1,48 @@
+<aura:component  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global" >
+
+<!-- Normal Attribute -->
+<aura:attribute name="name" type="String" access="public" default="Value of the Name" />
+
+<!-- This is the way we use the sObject as an attribute -->
+<aura:attribute name="newAcc" type="Account" access="public" default="{'sObjectType':'Account','Name':'Test Account'}" />
+
+<aura:attribute name="arrayDemo" type="String[]"  default="['v1','v2','v3']" access="public" />
+
+<aura:attribute name="listDemo" type="List" default="['List1','List2','List3']" access="public" />
+
+<aura:attribute name="setDemo" type="Set" default="['set1','set2','set3']" access="public" />
+
+<aura:attribute name="mapDemo" type="Map" default="{a:'Map1',b:'Map2',c:'Map3'}" access="public" />
+
+<!-- JsObject -->
+
+<aura:attribute name="jsObject" type="Object" access="public" />
+
+<!-- This for the wrapper class -->
+<aura:attribute name="userData" type="demoAuraWrapper.wrapperTest" access="public" />
+
+<!-- Handler for the attribute variable -->
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+<h1>
+    Commponent Attribute :{!v.name}
+</h1>
+
+<!-- This is how we will display the value in the UI -->
+<h1>
+    Account Name - {!v.newAcc.Name}
+
+    Array Values - {!v.arrayDemo[0]}
+
+    List Values - {!v.listDemo[1]}
+
+    Set values - {!v.setDemo[0]}
+
+    Map Values - {!v.mapDemo.a}
+
+</h1>
+
+Js Object - {!v.jsObject.name} - {!v.jsObject.email}
+
+Wrapper class - {!v.userData.myString} - {!v.userData.myInteger}
+</aura:component>	
