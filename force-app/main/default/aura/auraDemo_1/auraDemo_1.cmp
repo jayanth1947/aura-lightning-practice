@@ -24,6 +24,7 @@ access="global" >
 
 <!-- Handler for the attribute variable -->
 <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+<lightning:card  title="Aura Attributes">
 <h1>
     Commponent Attribute :{!v.name}
 </h1>
@@ -45,4 +46,5 @@ access="global" >
 Js Object - {!v.jsObject.name} - {!v.jsObject.email}
 
 Wrapper class - {!v.userData.myString} - {!v.userData.myInteger}
+</lightning:card>
 </aura:component>	

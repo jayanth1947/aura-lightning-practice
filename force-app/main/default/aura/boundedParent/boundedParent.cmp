@@ -2,7 +2,7 @@
 access="global">
     <aura:attribute name="parentAttr" type="String" access="public" default="Parent Value" />
     <aura:handler name="change" value="{!v.parentAttr}" action="{!c.parentHandler}" />
-
+    <lightning:card title="Bounded Expression">
     <!-- Child Component is placed on the parent cmp -->
     <c:boundedExpChild childAttr="{!v.parentAttr}"/>
     <br/>
@@ -12,5 +12,6 @@ access="global">
     <br/>
     <br/>
     <lightning:button label="Click Parent" onclick="{!c.handleParentClick}"/>
+</lightning:card>
 
 </aura:component>	

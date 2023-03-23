@@ -4,6 +4,7 @@ access="global">
 
     <!-- Here firstly the value of the parent is shown on the screen then after
     clicking on that button the vlaue of the child will be set  -->
+    <lightning:card  title="Unbounded Expression">
     <c:unBoundedExpressions childAttr="{#v.parentAttr}"/>
     <hr/>
 
@@ -15,4 +16,5 @@ access="global">
 
     <!-- Only the value of the parent is shown when the button is clicked -->
     <lightning:button label="Parent Button" onclick="{!c.parentHandler}"/>
+</lightning:card>
 </aura:component>	
