@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+    <aura:attribute name="parentAttr" type="String" access="public" default="Parent Value" />
+
+    <!-- Here firstly the value of the parent is shown on the screen then after
+    clicking on that button the vlaue of the child will be set  -->
+    <c:unBoundedExpressions childAttr="{#v.parentAttr}"/>
+    <hr/>
+
+
+    Prent Value - {!v.parentAttr}
+
+    <br/>
+    <br/>
+
+    <!-- Only the value of the parent is shown when the button is clicked -->
+    <lightning:button label="Parent Button" onclick="{!c.parentHandler}"/>
+</aura:component>	

@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+    <aura:attribute name="parentAttr" type="String" access="public" default="Parent Value" />
+    <aura:handler name="change" value="{!v.parentAttr}" action="{!c.parentHandler}" />
+
+    <!-- Child Component is placed on the parent cmp -->
+    <c:boundedExpChild childAttr="{!v.parentAttr}"/>
+    <br/>
+    <br/>
+
+    Parent Value - {!v.parentAttr}
+    <br/>
+    <br/>
+    <lightning:button label="Click Parent" onclick="{!c.handleParentClick}"/>
+
+</aura:component>	

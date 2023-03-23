@@ -1,0 +1,10 @@
+<aura:component>
+    <aura:attribute name="childAttr" type="String" access="public" />
+    <!--Handler is called with child attr  -->
+    <aura:handler name="init" value="{!v.childVar}" action="{!c.handleChildChange}" />
+
+    Child Value - {!v.childAttr}
+    <br/>
+    <br/>
+    <lightning:button label="Update Child" onclick="{!c.handleChildClick}"/>
+</aura:component>	

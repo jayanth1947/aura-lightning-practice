@@ -1,0 +1,8 @@
+<aura:component>
+    <aura:attribute name="childAttr" type="String" access="public" />
+
+    Child Value - {!v.childAttr}
+    <br/>
+    <br/>
+    <lightning:button label="Click Here" onclick="{!c.handleClick}"/>
+</aura:component>	
