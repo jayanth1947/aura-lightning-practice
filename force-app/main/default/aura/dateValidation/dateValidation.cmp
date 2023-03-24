@@ -1,0 +1,30 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+    <!-- The testDate attribute is defined to store the entered date. -->
+    <aura:attribute name="testDate" type="date" access="public" />
+    <!-- The dataValidationError attribute is defined to indicate if there is a validation error. -->
+    <aura:attribute name="dataValidationError" type="boolean" access="public" />
+
+    <div class="wide">
+        <lightning:input type="date"  
+                         name="date" 
+                         value="{!v.testDate}"
+                         onchange="{!c.dateUpdate}"
+                         label="Enter date" 
+                         class="{v.dataValidationError ? 'slds-has-error' : ''}"/>
+        
+        <!-- An aura:if element is defined to conditionally render the error message if there is a validation error. -->
+        <aura:if isTrue="{!v.dataValidationError}">
+            <div class="slds-text-color_error slds-p-left_x-small">
+                Date Must be in Present or Future
+            </div>
+        </aura:if>
+        <br/>
+
+        <!-- The handleSubmit method handles the submit action by checking if there is a validation error and displaying an alert message if there is not. -->
+        <lightning:button disabled="{!v.dataValidationError}"
+                          variant="brand"
+                          label="Submit"
+                          onclick="{!c.handleSubmit}"/>
+    </div>
+</aura:component>	

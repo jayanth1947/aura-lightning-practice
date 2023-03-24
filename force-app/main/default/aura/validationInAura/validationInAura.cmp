@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+    Enter a Number <ui:inputText aura:id="inputCmp"/>
+
+    <br/>
+    <lightning:button label="Submit" onclick="{!c.doAction}"/>
+</aura:component>	
