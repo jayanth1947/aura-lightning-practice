@@ -1,0 +1,28 @@
+<!-- This component is ued for understanding the if block and nested if block in aura cmp -->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+    <aura:attribute name="flag" type="boolean" access="public" default="false " />
+    <aura:attribute name="flagHeader" type="boolean" access="public" default="false" />
+
+    Enter a Number : <ui:inputText aura:id="inputCmp"/>
+    <br/>
+
+    <aura:if isTrue="{!v.flagHeader}">
+        <aura:if isTrue="{!v.flag}">
+        <div>
+            Value is Greater than or equals to 50
+        </div>
+        <!-- Else block It is optional -->
+        <aura:set attribute="else">
+            <div>
+                Value is less than 50
+            </div>
+        </aura:set>
+    </aura:if>
+
+    </aura:if>
+    <!-- If block -->
+    
+    <lightning:button label="Click Here" onclick="{!c.handleBtn}"/>
+    
+</aura:component>	

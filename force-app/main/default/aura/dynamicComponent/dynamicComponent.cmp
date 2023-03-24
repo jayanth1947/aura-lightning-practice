@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+    <!-- Define a public attribute called "message" of type String -->
+    <aura:attribute name="message" type="String" access="public" />
+    <!-- Register an "init" event handler that calls the "doInit" function in the controller -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <p>Dynamically Created Button</p>
+
+    <br/> <hr/>
+
+    <!-- This is default "body" attribute is already available -->
+    {!v.body}
+
+    <br/><hr/>
+
+    <!-- Display the value of the "message" attribute -->
+    Button is clicked - {!v.message}
+</aura:component>	

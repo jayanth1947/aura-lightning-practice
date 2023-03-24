@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+    <p>Click the button to control the Error</p>
+
+    <div aura:id="div1">
+
+    </div>
+    <lightning:button label="Throw Error" onclick="{!c.throwError}"/>
+</aura:component>	
