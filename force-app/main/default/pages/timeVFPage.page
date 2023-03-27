@@ -1,0 +1,19 @@
+<apex:page >
+    <apex:includeLightning />
+    <h1>
+        Visual force Page
+    </h1>
+    <div id="time" >
+   
+    </div>
+    <!--This is the way we need to include aura in VF page
+	1. Need to place the aura cmp inside the application.
+	2. Then use the app inside the application-->
+    <script>
+    $Lightning.use("c:TimeApp",function(){
+        $Lightning.createComponent("c:vfinsideAura",{},"time", function(cmp){
+        console.log("Component Created");
+        });
+        });
+    </script>
+</apex:page>

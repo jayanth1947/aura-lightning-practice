@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+    <aura:attribute name="vfHost" type="String" default="empathetic-goat-jgrtil-dev-ed--c.vf.force.com" access="public" />
+
+    <h1>Aura Component</h1>
+    <br/>
+    <br/>
+    <!-- Calling VF Page in Aura -->
+    <iframe aura:id="vfFrame"
+            src="{!'https://' + v.vfHost + '/apex/vfPageForAura'}"
+            height="500" 
+            width="500"/>
+</aura:component>	

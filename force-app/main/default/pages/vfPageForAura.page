@@ -1,0 +1,8 @@
+<apex:page>
+<h1>
+    Heading Inside a VF Page
+</h1>
+<p>
+    Paragraph in VF Page
+</p>
+</apex:page>
