@@ -1,0 +1,24 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+
+    <!-- The games attribute is defined as an array of strings,  -->
+    <aura:attribute name="games" type="String[]" access="public"
+                    default="['FootBall','Cricket','VolleyBall']" />
+
+    <lightning:card>
+
+    <!-- Inside the card, there is a div element that contains a title and an aura:iteration element. -->
+        <div class="slds-p-around_medium">
+            <h1> <strong> List of Games</strong></h1>
+
+                <!-- The aura:iteration iterates over the games attribute and displays each item in a ul list. -->
+                <aura:iteration items="{!v.games}" var="game">
+                    <ul>
+                        <li>{!game}</li>
+                    </ul>
+                </aura:iteration>
+        </div>
+        
+    </lightning:card>
+    
+</aura:component>	

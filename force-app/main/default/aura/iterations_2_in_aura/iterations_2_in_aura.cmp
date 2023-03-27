@@ -1,0 +1,23 @@
+<aura:component controller="accountController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+
+     <!-- Define an attribute to hold a list of Account records -->
+    <aura:attribute name="accList" type="Account" access="public" />
+
+    <!-- Call the "doInit" function when the component is initialized -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+
+    <!-- Display the list of accounts in a lightning card -->
+    <lightning:card>
+        <div class="slds-p-around_large">
+            <h1><strong>List Of Accounts</strong></h1>
+
+            <!-- Use an "aura:iteration" tag to iterate over the list of accounts -->
+            <aura:iteration items="{!v.accList}" var="acc">
+                Name - {!acc.Name} <br/> <br/>
+                Phone - {!acc.Phone} <br/> <br/>
+            </aura:iteration>
+        </div>
+    </lightning:card>
+</aura:component>	

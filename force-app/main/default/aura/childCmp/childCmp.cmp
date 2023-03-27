@@ -1,0 +1,19 @@
+<aura:component>
+     <!-- Defines a public method named "show" that will call the "showMessage" method in the associated controller -->
+    <aura:method name="show" action="{!c.showMessage}" access="PUBLIC">
+        <!-- Defines a public attribute named "message" of type String with a default value of an empty string -->
+        <aura:attribute name="message" type="String" default="" access="public" />
+
+    </aura:method>
+    <!-- Defines a public method named "error" that will call the "showErrorMessage" method in the associated controller -->
+    <aura:method name="error" action="{!c.showErrorMessage}" access="PUBLIC">
+        <!-- Defines a public attribute named "message" of type String -->
+        <aura:attribute name="message" type="String" access="public" />
+
+    </aura:method>
+     <!-- Defines a public method named "remove" that will call the "removeMessage" method in the associated controller -->
+    <aura:method name="remove" action="{!c.removeMessage}" access="PUBLIC"/>
+
+    <!-- A div element with an aura:id of "messages" where the message content will be displayed -->
+    <div aura:id="messages"/>
+</aura:component>	

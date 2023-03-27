@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+    <aura:attribute name="valueFromChild" type="String" access="public" />
+
+    <p>
+        Parent Component
+    </p>
+    <br/>
+    Value From Child Component : {!v.valueFromChild}
+    <hr/>
+
+    <!-- This is the child component -->
+    <c:childActionCmp aura:id="msg" parentAction="{!c.methodFromChild}"/>
+
+    <br/>
+    <hr/>
+    <p>
+        Parent Ends Here
+    </p>
+</aura:component>	

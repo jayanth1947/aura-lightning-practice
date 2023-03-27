@@ -1,0 +1,17 @@
+<aura:component>
+
+    <!-- The aura:attribute tags define two attributes:
+         parentAction of type Aura.Action which will be used to call a method in the parent component. -->
+    <aura:attribute name="parentAction" type="Aura.Action" access="public" />
+
+    <!-- valueForParent of type String with a default value of "Child Value for Parent". -->
+    <aura:attribute name="valueForParent" type="String" default="Child Value for Parent" access="public" />
+
+    <p>
+        Child Component
+    </p>
+
+    <!-- The ui:button tag creates a button with a label "Call Parent Method" which is linked to the parentAction attribute defined above. -->
+    <ui:button label="Call Parent Method" press="{!v.parentAction}"/>
+
+</aura:component>	

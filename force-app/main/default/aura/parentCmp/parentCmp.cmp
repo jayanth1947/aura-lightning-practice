@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+    <h1>Calling Methods from child to parent component</h1>
+
+    <hr/>
+
+    <!-- The child component with an aura:id of "messages" -->
+    <c:childCmp aura:id="messages"/>
+
+    <!-- Buttons to call the handleShow, handleError, and handleRemove functions in the parent component -->
+    <ui:button label="Show Confirmation" press="{!c.handleShow}"/>
+    <ui:button label="Show Error" press="{!c.handleError}"/>
+    <ui:button label="Remove Message" press="{!c.handleRemove}"/>
+</aura:component>	
