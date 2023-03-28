@@ -9,4 +9,4 @@ access="global">
     <c:appEventHandler/>
 </lightning:card>
     
-</aura:component>	
+</aura:component>
