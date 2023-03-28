@@ -1,0 +1,19 @@
+<aura:component>
+
+    <!-- Register the "cmpEvent" event with type "c:componentEvent" -->
+    <aura:registerEvent name="cmpEvent" type="c:componentEvent"/>
+
+    <!-- Defines a public attribute named "messageString" with type String -->
+    <aura:attribute name="messageString" type="String" access="public" />
+
+     <!-- Display a heading for the component -->
+    <h1>
+        Component Event Notifier
+    </h1>
+
+    <!-- Display an input field for the message string -->
+    <ui:inputText label="Message" value="{!v.messageString}"/>
+
+    <!-- Display a button for firing the component event -->
+    <ui:button label="Fire Component Event" press="{!c.fireCmpEvent}"/>
+</aura:component>	

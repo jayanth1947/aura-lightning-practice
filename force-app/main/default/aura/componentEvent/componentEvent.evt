@@ -1,0 +1,10 @@
+<!-- This is an Aura event template -->
+<aura:event type="COMPONENT" description="Event template">
+
+    <!-- Defines a public attribute named "message" with type String -->
+    <aura:attribute name="message" type="String" access="public" />
+
+    <!-- Defines a public attribute named "label" with type String -->
+    <aura:attribute name="label" type="String" access="public" />
+</aura:event>
+

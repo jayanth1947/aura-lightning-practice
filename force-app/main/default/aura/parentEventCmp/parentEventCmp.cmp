@@ -1,0 +1,33 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+
+    <!-- Define attributes for the component -->
+    <aura:attribute name="msgFromNotifier" type="String" access="public" />
+    <aura:attribute name="eventCount" type="Integer" default="0" access="public" />
+    <aura:attribute name="label" type="String" access="public" />
+
+     <!-- Define the event handler that handles the "cmpEvent" event -->
+    <aura:handler name="cmpEvent" event="c:componentEvent" action="{!c.handleComponentEvent}"/>
+
+     <!-- Define the UI for the component -->
+    <lightning:card class="slds-p-around_large">
+        <h1>
+            Component Event Handler
+        </h1>
+    
+        <!-- Display the message received from the notifier component -->
+        <p>
+            {!v.msgFromNotifier}
+        </p>
+
+         <!-- Display the label and event count attributes of the component -->
+        <p>{!v.label}</p>
+        <p>{!v.eventCount}</p>
+    
+        <br/>
+        <br/>
+        <!-- This is the child event -->
+        <c:childEventCmp/>
+    </lightning:card>
+    
+</aura:component>	
