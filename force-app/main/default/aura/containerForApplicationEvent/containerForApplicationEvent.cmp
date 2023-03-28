@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+access="global">
+
+<!-- Here both the components are placed and diplayed as a single component -->
+<lightning:card class="slds-p-around_large">
+    <c:appEventNotifier/>
+    <br/>
+    <br/>
+    <c:appEventHandler/>
+</lightning:card>
+    
+</aura:component>	

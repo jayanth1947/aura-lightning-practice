@@ -1,0 +1,11 @@
+<aura:component>
+    <!-- Register an event for firing the event from notifier to handler -->
+    <aura:registerEvent name="appEvent" type="c:applicationEvent"/>
+
+    <h1>
+        Application Event Notifier
+    </h1>
+
+    <!-- Button for firing the event -->
+    <ui:button label="Fire Application Event" press="{!c.fireAppEvent}"/>
+</aura:component>	

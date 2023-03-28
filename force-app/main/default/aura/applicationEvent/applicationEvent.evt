@@ -1,0 +1,6 @@
+<!-- This is the Application Event  -->
+<aura:event type="APPLICATION" description="Event template">
+
+    <!-- An attribute with message is defined with a type of string -->
+    <aura:attribute name="message" type="String" access="public" />
+</aura:event>

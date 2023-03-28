@@ -1,0 +1,15 @@
+<aura:component>
+
+    <!-- An attribute is intializrd -->
+    <aura:attribute name="messageFromNotifier" type="type" access="public" />
+
+    <!-- Here the event handler is defined for handling the event -->
+    <aura:handler event="c:applicationEvent" action="{!c.handleAppEvent}"/>
+
+    <h1>
+        Application Event Handler
+    </h1>
+    <p>
+        Value - {!v.messageFromNotifier}
+    </p>
+</aura:component>	
